@@ -1,0 +1,9 @@
+
+airplay() {
+	sudo service shairport-sync ${1:-status}
+}
+
+tidal() {
+	sudo service ifi-streamer-tidal-connect ${1:-status}
+}
+

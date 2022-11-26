@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # add stretch repo to sources list
-#echo "deb http://archive.raspbian.org/raspbian stretch main" >> /etc/apt/sources.list
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9165938D90FDDD2E
+echo "deb http://archive.raspbian.org/raspbian stretch main" > /etc/apt/sources.list.d/ifi-stream-tidal-connect.list
 
 # update package list and install dependencies
 apt update
