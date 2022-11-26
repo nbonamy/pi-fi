@@ -29,6 +29,9 @@ chmod +x /usr/ifi/ifi-tidal-release/pa_devs/run.sh
 # deploy files
 ./ifi-tidal-release/file-deploy.sh 
 
+# enable on boot
+sudo systemctl enable ifi-streamer-tidal-connect.service
+
 # start service and check on status
 systemctl daemon-reload
 systemctl start ifi-streamer-tidal-connect.service 
