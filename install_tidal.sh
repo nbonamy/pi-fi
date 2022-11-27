@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#
+# Original instructions: https://audiophilestyle.com/forums/topic/62703-tidal-connect-on-raspberry-how-to/#comments
+# Original script: https://raw.githubusercontent.com/shawaj/HiTide/main/install.sh
+#
+
 # add stretch repo to sources list
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9165938D90FDDD2E
 echo "deb http://archive.raspbian.org/raspbian stretch main" > /etc/apt/sources.list.d/ifi-stream-tidal-connect.list
