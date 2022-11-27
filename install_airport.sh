@@ -1,4 +1,9 @@
 
+#
+# Instructions taken from
+# https://pimylifeup.com/raspberry-pi-airplay-receiver/
+#
+
 # install required packages
 apt install -y autoconf libtool libdaemon-dev libasound2-dev libpopt-dev libconfig-dev
 apt install -y avahi-daemon libavahi-client-dev
