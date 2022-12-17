@@ -34,6 +34,11 @@ chmod +x /usr/ifi/ifi-tidal-release/pa_devs/run.sh
 # deploy files
 ./ifi-tidal-release/file-deploy.sh 
 
+# overwrite with our stuff
+sudo rm /lib/systemd/system/ifi-streamer-tidal-connect.service
+sudo ln -s /home/mnmt/pi-fi/ifi-streamer-tidal-connect.service /lib/systemd/system/ifi-streamer-tidal-connect.service
+
+
 # enable on boot
 sudo systemctl enable ifi-streamer-tidal-connect.service
 

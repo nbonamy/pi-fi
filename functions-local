@@ -1,9 +1,20 @@
 
 airplay() {
-	sudo service shairport-sync ${1:-status}
+	if [ "$1" = "edit" ] ; then
+		sudo vi /usr/local/etc/shairport-sync.conf
+		airplay restart
+	else
+		sudo service shairport-sync ${1:-status}
+	fi
 }
 
 tidal() {
-	sudo service ifi-streamer-tidal-connect ${1:-status}
+	if [ "$1" = "edit" ] ; then
+		sudo vi ~/pi-fi/ifi-streamer-tidal-connect.service
+		sudo systemctl daemon-reload
+		tidal restart
+	else
+		sudo service ifi-streamer-tidal-connect ${1:-status}
+	fi
 }
 

@@ -2,7 +2,7 @@ pcm.volume {
   type softvol
   slave.pcm "output"
   control {
-    name "Master"
+    name "SoftMaster"
     card 0
   }
 }
