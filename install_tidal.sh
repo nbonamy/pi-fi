@@ -6,7 +6,7 @@
 #
 
 # add stretch repo to sources list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9165938D90FDDD2E
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9165938D90FDDD2E
 echo "deb http://archive.raspbian.org/raspbian stretch main" > /etc/apt/sources.list.d/ifi-stream-tidal-connect.list
 
 # update package list and install dependencies
@@ -35,12 +35,10 @@ chmod +x /usr/ifi/ifi-tidal-release/pa_devs/run.sh
 ./ifi-tidal-release/file-deploy.sh 
 
 # overwrite with our stuff
-sudo rm /lib/systemd/system/ifi-streamer-tidal-connect.service
-sudo ln -s /home/mnmt/pi-fi/ifi-streamer-tidal-connect.service /lib/systemd/system/
-
+ln -sf /home/mnmt/pi-fi/ifi-streamer-tidal-connect.service /lib/systemd/system/
 
 # enable on boot
-sudo systemctl enable ifi-streamer-tidal-connect.service
+systemctl enable ifi-streamer-tidal-connect.service
 
 # start service and check on status
 systemctl daemon-reload
