@@ -1,0 +1,12 @@
+[Unit]
+Description=Speaker Controller
+After=ifi-streamer-tidal-connect.service
+
+[Service]
+Type=forking
+Restart=on-failure
+RestartSec=3
+ExecStart=/usr/bin/screen -L -dmS root /usr/ifi/ifi-tidal-release/bin/speaker_controller_application
+
+[Install]
+WantedBy=multi-user.target

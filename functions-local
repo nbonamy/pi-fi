@@ -15,6 +15,6 @@ tidal() {
 		tidal restart
 	else
 		sudo service ifi-streamer-tidal-connect ${1:-status}
+		sudo service tidal-speaker_controller ${1:-status}
 	fi
 }
-

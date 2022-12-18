@@ -6,17 +6,17 @@ ExecStart=/usr/ifi/ifi-tidal-release/bin/tidal_connect_application \
 				--tc-certificate-path "/usr/ifi/ifi-tidal-release/id_certificate/IfiAudio_ZenStream.dat" \
 				--model-name "Pi-Fi Streamer" \
 				--friendly-name "Living Room Hi-Fi" \
-				--playback-device "PMA-A110: USB Audio (hw:0,0)"
+#				--playback-device "PMA-A110: USB Audio (hw:0,0)"
 #				--playback-device "bcm2835 HDMI 1: - (hw:1,0)"
-#				--playback-device "SoftMaster"
+				--playback-device "usbvol"
 				--codec-mpegh true \
 				--codec-mqa false \
 				--enable-mqa-passthrough false \
-				--disable-app-security true \
-				--disable-web-security true \
-				--log-level 6 \
-				--enable-websocket-log 3 \
-				--enable-debug-port true
+				--disable-app-security false \
+				--disable-web-security false \
+				--log-level 4 \
+#				--enable-websocket-log 0 \
+				--enable-debug-port false
 
 User=root
 Group=root
