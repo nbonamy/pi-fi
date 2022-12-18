@@ -1,6 +1,7 @@
 [Unit]
 Description=Speaker Controller
 After=ifi-streamer-tidal-connect.service
+#BindsTo=ifi-streamer-tidal-connect.service
 
 [Service]
 Type=forking

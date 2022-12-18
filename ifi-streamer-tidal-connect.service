@@ -14,9 +14,9 @@ ExecStart=/usr/ifi/ifi-tidal-release/bin/tidal_connect_application \
 				--enable-mqa-passthrough false \
 				--disable-app-security false \
 				--disable-web-security false \
+				--enable-debug-port false \
 				--log-level 4 \
-#				--enable-websocket-log 0 \
-				--enable-debug-port false
+				--enable-websocket-log 0 
 
 User=root
 Group=root
