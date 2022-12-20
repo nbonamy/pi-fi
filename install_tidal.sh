@@ -18,10 +18,10 @@ mkdir /usr/ifi
 cd /usr/ifi
 
 # download and install other needed dependencies
-curl -k -O -L http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
-apt install -y ./libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
-curl -k -O -L http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3_7.38.0-4+deb8u16_armhf.deb
-apt install -y ./libcurl3_7.38.0-4+deb8u16_armhf.deb
+#curl -k -O -L http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
+#apt install -y ./libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
+#curl -k -O -L http://security.debian.org/debian-security/pool/updates/main/c/curl/libcurl3_7.38.0-4+deb8u16_armhf.deb
+#apt install -y ./libcurl3_7.38.0-4+deb8u16_armhf.deb
 
 # clone git repo
 git clone https://github.com/shawaj/ifi-tidal-release
@@ -30,6 +30,11 @@ git clone https://github.com/shawaj/ifi-tidal-release
 chmod +x /usr/ifi/ifi-tidal-release/play
 chmod +x /usr/ifi/ifi-tidal-release/bin/tidal_connect_application
 chmod +x /usr/ifi/ifi-tidal-release/pa_devs/run.sh
+
+# copy dependencies
+cp /home/mnmt/pi-fi/libssl.so.1.0.0 /usr/ifi/ifi-tidal-release/bin
+cp /home/mnmt/pi-fi/libcurl.so.4.3.0 /usr/ifi/ifi-tidal-release/bin
+ln -sf /usr/ifi/ifi-tidal-release/bin/libcurl.so.4.3.0 /usr/ifi/ifi-tidal-release/bin/libcurl.so.4
 
 # deploy files
 ./ifi-tidal-release/file-deploy.sh 
