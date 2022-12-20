@@ -7,9 +7,9 @@ ExecStart=/usr/ifi/ifi-tidal-release/bin/tidal_connect_application \
 				--tc-certificate-path "/usr/ifi/ifi-tidal-release/id_certificate/IfiAudio_ZenStream.dat" \
 				--model-name "Pi-Fi Streamer" \
 				--friendly-name "Living Room Hi-Fi" \
-#				--playback-device "PMA-A110: USB Audio (hw:0,0)"
-#				--playback-device "bcm2835 HDMI 1: - (hw:1,0)"
-				--playback-device "usbvol"
+#				--playback-device "PMA-A110: USB Audio (hw:0,0)" \
+#				--playback-device "bcm2835 HDMI 1: - (hw:1,0)" \
+				--playback-device "usbvol" \
 				--codec-mpegh true \
 				--codec-mqa false \
 				--enable-mqa-passthrough false \
