@@ -1,10 +1,10 @@
 uuid: a33acf6b-f7b0-4f61-9370-07165e7c9729
 name: Living Room Hi-Fi
-host: 192.168.1.2
 port: 8000
+volume: 34
+host: 192.168.1.2
 karaoke: 192.168.1.2:5004
-amixer: Master
-volume: 26
+mixer: none
 beforeplay:
   - sudo service ifi-streamer-tidal-connect restart
   - sudo service tidal-speaker_controller restart
