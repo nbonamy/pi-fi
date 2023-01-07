@@ -1,0 +1,8 @@
+[Unit]
+Description=USB DAC Monitor
+
+[Service]
+ExecStart=/home/mnmt/pi-fi/usbdac_monitor.sh
+
+[Install]
+WantedBy=multi-user.target
